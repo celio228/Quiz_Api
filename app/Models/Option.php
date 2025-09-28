@@ -14,6 +14,9 @@ class Option extends Model
         'option_text',
         'is_correct'
     ];
+    protected $casts = [
+        'is_correct' => 'boolean',
+    ];
 
     public function question()
     {

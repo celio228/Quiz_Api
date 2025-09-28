@@ -13,6 +13,7 @@ class QuestionController extends Controller
         $questions = Question::where('theme_id', $themeId)
             ->with('options')
             ->get();
+        // $questions = Question::all();
 
         return response()->json($questions);
     }
